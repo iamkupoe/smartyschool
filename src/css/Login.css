@@ -1,0 +1,44 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 15rem;
+  background-color: rgb(22, 16, 16);
+  height: 100vh;
+}
+
+#titles {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+.image-container {
+  background-color: #fff;
+  height: 12rem;
+  width: 13rem;
+  padding-top: 3rem;
+}
+
+.logo {
+  height: 130px;
+  width: 11rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #013250;
+  height: 12rem;
+  width: 13rem;
+  padding-top: 3rem;
+}
+
+#sub {
+  width: 5rem;
+  margin-left: 2rem;
+}
