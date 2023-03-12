@@ -1,0 +1,42 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #c0cac2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  li {
+    list-style: none;
+  
+  }
+  .main-body {
+    height: 100vh;
+  }
+  
+  #items {
+      padding-bottom: 4rem;
+  }
+  .logo-container{
+      border-bottom: #c0cac2;
+      border-width: 1rem;
+      padding-bottom: 2rem;
+      margin-top: 0;
+      padding-top: 0;
+  }
+  .logo {
+      width: 5rem;
+      height: 5rem;
+      float: left;
+      margin-top: 0;
+      padding-top: 0;
+  }
+  .item-container {
+      
+  }
+  .sch-name{
+      padding-top: 0;
+      margin-top: 0;
+  }
