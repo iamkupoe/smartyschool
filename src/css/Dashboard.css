@@ -27,9 +27,11 @@
   
   #items {
       padding-bottom: 4rem;
+    
   }
   .item1 :hover{
     color: rgb(29, 132, 222);
+    
   }
   .logo-container{
     border-bottom: 1px solid rgb(212, 212, 226);
@@ -51,6 +53,14 @@
 .item1 {
     display: flex;
 flex-direction: row;
+border-bottom: 1px solid rgb(163, 163, 192);
+height: 1.5rem;
+padding-bottom: 1.5rem;
+padding-top: 1.5rem;
+}
+.item1:hover{
+    background-color: aquamarine;
+    border-radius: 0.5rem;
 }
 #dashb-icon{
 padding-right: 1rem;
