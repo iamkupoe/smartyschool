@@ -1,13 +1,12 @@
 import React from "react";
-import "../css/Dashboard.css";
+import "../css/Sidebar.css";
 import logo from "../assets/images/Campion-College-School-Logo-Design-1024x791.jpeg";
 import { RxDashboard } from "react-icons/rx";
 import { RiProfileFill } from "react-icons/ri";
 import { HiUserAdd } from "react-icons/hi";
-import {MdPayment} from "react-icons/md";
-import {TbReportAnalytics} from "react-icons/tb";
-import {FiSettings} from "react-icons/fi";
-
+import { MdPayment } from "react-icons/md";
+import { TbReportAnalytics } from "react-icons/tb";
+import { FiSettings } from "react-icons/fi";
 
 const Sidebar = () => {
   return (
@@ -32,21 +31,18 @@ const Sidebar = () => {
             <li id="items">Register</li>
           </di>
           <div className="item1">
-          <MdPayment id="dashb-icon"/>
+            <MdPayment id="dashb-icon" />
             <li id="items">Fees</li>
           </div>
           <div className="item1">
-          <TbReportAnalytics id="dashb-icon"/>
+            <TbReportAnalytics id="dashb-icon" />
             <li id="items">Reports</li>
           </div>
           <div className="item1">
-          <FiSettings id="dashb-icon"/>
+            <FiSettings id="dashb-icon" />
             <li id="items">Settings</li>
           </div>
         </ul>
-      </div>
-      <div className="main-body">
-        <h1>one</h1>
       </div>
     </div>
   );
