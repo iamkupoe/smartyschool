@@ -6,56 +6,65 @@ function MainContent() {
     <div className="grid-container">
       <div className="phase1">
         <div className="grid-tuition">
-          <h5 id="title">Expected</h5>
-          <p id="sub">{" GH\u20B5"}</p>
-          <h5 id="title">Paid</h5>
-          <p id="sub">{" GH\u20B5"}</p>
-          <h5 id="title">Balance</h5>
-          <p id="sub">{" GH\u20B5"}</p>
+           <h4>Tuition Fees</h4>
+          <p id="expectedText">Expected Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}10,500.00</p>
+          <p id="expectedText">Paid Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}8,500.00</p>
+          <p id="expectedText">Balance</p>
+          <p id="expectedValue">{" GH\u20B5"}2,000.00</p>
         </div>
+        <br/>
         <div className="toiletories">
-          <h5>Expected</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Paid</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Balance</h5>
-          <p>{" GH\u20B5"}</p>
+        <h4>Toiletories</h4>
+          <p id="expectedText">Expected Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}2,500.00</p>
+          <p id="expectedText">Paid Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}2,000.00</p>
+          <p id="expectedText">Balance</p>
+          <p id="expectedValue">{" GH\u20B5"}500.00</p>
         </div>
       </div>
       <div className="phase2">
         <div className="exam">
-          <h5>Expected</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Paid</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Balance</h5>
-          <p>{" GH\u20B5"}</p>
+        <h4>Exam Fees</h4>
+          <p id="expectedText">Expected Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}1,000.00</p>
+          <p id="expectedText">Paid Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}800.00</p>
+          <p id="expectedText">Balance</p>
+          <p id="expectedValue">{" GH\u20B5"}200.00</p>
         </div>
+        <br/>
         <div className="feeding">
-          <h5>Expected</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Paid</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Balance</h5>
-          <p>{" GH\u20B5"}</p>
+         <h4>Feeding Fees</h4>
+          <p id="expectedText">Expected Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}4,000.00</p>
+          <p id="expectedText">Paid Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}3,000.00</p>
+          <p id="expectedText">Balance</p>
+          <p id="expectedValue">{" GH\u20B5"}1,000.00</p>
         </div>
       </div>
       <div className="phase3">
         <div className="transport">
-          <h5>Expected</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Paid</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Balance</h5>
-          <p>{" GH\u20B5"}</p>
+        <h4>Transport Fees</h4>
+          <p id="expectedText">Expected Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}3,000.00</p>
+          <p id="expectedText">Paid Fees</p>
+          <p id="expectedValue">{" GH\u20B5"}2,500.00</p>
+          <p id="expectedText">Balance</p>
+          <p id="expectedValue">{" GH\u20B5"}500.00</p>
         </div>
+        <br/>
         <div className="enrolment">
-          <h5>Expected</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Paid</h5>
-          <p>{" GH\u20B5"}</p>
-          <h5>Balance</h5>
-          <p>{" GH\u20B5"}</p>
+        <h4>Enrolment</h4>
+          <p id="expectedText">Total</p>
+          <p id="expectedValue">150</p>
+          <p id="expectedText">Boys</p>
+          <p id="expectedValue">70</p>
+          <p id="expectedText">Girls</p>
+          <p id="expectedValue">80</p>
         </div>
       </div>
     </div>
