@@ -110,7 +110,14 @@ You can deploy this project using Github pages.
 
 - GitHub: [Adams-Ghub](https://github.com/Adams-Ghub)
 - Twitter: [@bamfoaf](https://twitter.com/bamfoaf)
-- LinkedIn: [Adams Bamfo](https://www.linkedin.com/in/adams-bamfo-3aaa3011b/)
+- LinkedIn: [Adams Bamfo](https://www.linkedin.com/in/adams-bamfo/)
+
+
+👤 **Samuel Kupoe**
+
+- GitHub: [iamkupoe](https://github.com/iamkupoe)
+- Twitter: [@iamkupoe](https://twitter.com/iamkupoe)
+- LinkedIn: [Samuel Kupoe](https://www.linkedin.com/in/samuel-kupoe-39339558/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
