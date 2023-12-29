@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Login.css";
-import SchoolLogo from "../assets/images/Campion-College-School-Logo-Design-1024x791.jpeg";
+import SchoolLogo from "../assets/images/school_logo.png";
 
 const Login = () => {
   return (
@@ -10,16 +10,16 @@ const Login = () => {
       </div>
       <div className="form-container">
         <form className="login-form">
-          <label id="titles">
+          <label className="titles">
             Username:
-            <input type="text" name="username" />
+            <input type="text" name="username" className="text-input" />
           </label>
-          <br />
-          <label id="titles">
+          
+          <label className="titles">
             Password:
-            <input type="password" name="password" />
+            <input type="password" name="password" className="text-input" />
           </label>
-          <br />
+         
           <button id="sub" type="Login">
             Login
           </button>
