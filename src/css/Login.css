@@ -1,44 +1,118 @@
 .login-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 15rem;
+  align-items: center;
   background-color: rgb(22, 16, 16);
   height: 100vh;
 }
 
-#titles {
+.titles {
   color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 2rem;
+  padding: 0;
+  margin: 0;
 }
 .image-container {
   background-color: #fff;
-  height: 12rem;
-  width: 13rem;
-  padding-top: 3rem;
+  height: 5rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.forgotPasswordLink{
+  align-self: flex-start;
+  padding-left: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
 }
 
 .logo {
-  height: 130px;
-  width: 11rem;
+  height: 80px;
+  width: 80px;
+  
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
+  background-color: #013250;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
 }
 .login-form {
   display: flex;
   flex-direction: column;
-  background-color: #013250;
-  height: 12rem;
-  width: 13rem;
-  padding-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+
+.text-input{
+  outline: none;
+  border-radius: 4px;
+  border: solid 1px #000;
+  padding: 0.5rem 0.25rem;
+  width: 12rem;
 }
 
 #sub {
-  width: 5rem;
-  margin-left: 2rem;
+  width: 12.5rem;
+ padding:0.5rem 0;
+ margin-top: 0.5rem;
+ background-color: #0073cf;
+ color: #fff;
+ border-style: none;
+ border-radius: 4px;
+ outline: none;
+}
+
+/* Tablets */
+@media screen and (min-width:768px) {
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 16, 16);
+    height: 100vh;
+  }
+  .image-container {
+    height: 15rem;
+    width: 15rem;  
+  }
+
+  .logo{
+    width:150px;
+    height: 150px;
+  }
+}
+
+
+/* Laptops and Desktop */
+@media screen and (min-width:1024px) {
+  .logo{
+    width:200px;
+    height: 200px;
+  }
+
+  .image-container {
+    height: 20rem;
+    width: 20rem;  
+  }
+  .form-container {
+    height: 20rem;
+    width: 20rem;
+  }
+  .forgotPasswordLink{
+    padding-left: 3.8rem;
+    font-size: 1rem;
+  }
 }
