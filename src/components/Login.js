@@ -14,12 +14,13 @@ const Login = () => {
             Username:
             <input type="text" name="username" className="text-input" />
           </label>
-          
+
           <label className="titles">
             Password:
             <input type="password" name="password" className="text-input" />
           </label>
-         
+          <a href="#" className="forgotPasswordLink">forgot password?</a>
+
           <button id="sub" type="Login">
             Login
           </button>

@@ -25,6 +25,14 @@
 
 }
 
+.forgotPasswordLink{
+  align-self: flex-start;
+  padding-left: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
 .logo {
   height: 80px;
   width: 80px;
@@ -102,5 +110,9 @@
   .form-container {
     height: 20rem;
     width: 20rem;
+  }
+  .forgotPasswordLink{
+    padding-left: 3.8rem;
+    font-size: 1rem;
   }
 }
