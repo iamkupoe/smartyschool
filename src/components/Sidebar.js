@@ -10,8 +10,8 @@ import { FiSettings } from 'react-icons/fi';
 
 const Sidebar = () => {
   return (
-    <div className="sidebarContainer">
-      <div className="sidebar">
+   
+      <div className="sidebarContainer">
         <div className="logo-container">
           <img src={logo} alt="School Logo" className="logo" />
           <h2 id="sch-name">My School International</h2>
@@ -44,7 +44,7 @@ const Sidebar = () => {
           </a>
         </ul>
       </div>
-    </div>
+   
   );
 };
 
