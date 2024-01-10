@@ -1,79 +1,86 @@
-
-
 .sidebar {
-    width: 200px;
-    height: 100vh;
-    background-color: #c0cac2;
-    position: fixed;
-    padding-top: 0;
-    bottom: 0;
-    left: 0;
-    border-right: 2px solid rgb(21, 6, 231);
-  }
-  
-  li {
-    list-style: none;
-  
-  }
- #items:hover {
-      color: rgb(29, 132, 222);
-  }
-  #items:active{
-      color:rgb(255, 0, 21);
-  }
-  #items:visited {
-      color:rgb(80, 12, 238);
-  }
-  .main-body {
-    height: 100vh;
-  }
-  
-  #items {
-      padding-bottom: 4rem;
-    
-  }
-  .item1 :hover{
-    color: rgb(29, 132, 222);
-    
-  }
-  .logo-container{
-    border-bottom: 1px solid rgb(212, 212, 226);
-      padding-bottom: 2rem;
-      padding-left: 0;
-      margin-top: 0;
-  }
-  .logo {
-      width: 5rem;
-      height: 5rem;
-      float: left;
-      margin-top: 0;
-      padding-top: 0;
-      border-radius: 50%;
-  }
-  .item-container {
-      display: flex;
-  }
-.item1 {
-    display: flex;
-flex-direction: row;
-border-bottom: 1px solid rgb(163, 163, 192);
-height: 1.5rem;
-padding-bottom: 1.5rem;
-padding-top: 1.5rem;
-}
-.item1:hover{
-    background-color: aquamarine;
-    border-radius: 0.5rem;
-}
-#dashb-icon{
-padding-right: 1rem;
+  width: 15%;
+  height: 100vh;
+  background-color: #c0cac2;
+  position: fixed;
+  padding-top: 0;
+  bottom: 0;
+  left: 0;
+  /* border-right: 2px solid rgb(21, 6, 231); */
 }
 
-  .sch-name{
-      padding-top: 0;
-      margin-top: 0;
-  }
+
+/* #items:hover {
+  color: rgb(29, 132, 222);
+}
+#items:active {
+  color: rgb(255, 0, 21);
+}
+#items:visited {
+  color: rgb(80, 12, 238);
+} */
+.main-body {
+  height: 100vh;
+}
+
+.item1:hover #items {
+  color: '#efefef';
+}
+.logo-container {
+  border-bottom: 1px solid rgb(212, 212, 226);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+}
+.logo {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 0;
+  padding-top: 0;
+  border-radius: 50%;
+}
+.itemContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.item1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #a7a7a7a7;
+  height: 2.3rem;
+  padding: 3px 0 3px 10px;
+  color: black;
+  text-decoration: none;
+}
+.item1:hover  {
+  background-color: #a7a7a7a7;
+  
+}
+.item1:active  {
+  background-color: #a7a7a7a7;
+  
+}
+.item1:hover #items,.item1:hover #dashb-icon {
+  color: #ffffff;
+  
+}
+
+.item1:active #items,.item1:active #dashb-icon {
+  color: #ffffff;
+  
+}
+#dashb-icon {
+  padding-right: 1rem;
+}
+
+#sch-name {
+  text-align: left;
+  font-size: 1.2rem;
+  width: auto;
+}
 
 /*Main Body CSS*/
-
-  
