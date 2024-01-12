@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+   text-align: center;
+   width: 100%;
+  }
+  
+  .toolsPanel{
+    width: 15%;
+  }
+  .workspacePanel{
+    width: 85%;
+  }
