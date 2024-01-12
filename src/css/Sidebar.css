@@ -23,7 +23,7 @@
   gap: 0.5rem;
   align-items: center;
 }
-.logo {
+.school-logo {
   width: 3rem;
   height: 3rem;
   align-self: center;
@@ -47,43 +47,38 @@
   text-decoration: none;
 }
 
-#items{
+#items {
   display: none;
 }
-.item1:hover  {
+.item1:hover {
   background-color: #a7a7a7a7;
-  
 }
-.item1:active  {
+.item1:active {
   background-color: #a7a7a7a7;
-  
 }
-.item1:hover #items,.item1:hover #dashb-icon {
+.item1:hover #items,
+.item1:hover #dashb-icon {
   color: #ffffff;
-  
 }
 
-.item1:active #items,.item1:active #dashb-icon {
+.item1:active #items,
+.item1:active #dashb-icon {
   color: #ffffff;
-  
 }
 #dashb-icon {
   padding-right: 1rem;
 }
 
 #sch-name {
- display: none;
+  display: none;
 }
-
 
 /* Tablets */
-@media screen and (min-width:768px) {
-  
+@media screen and (min-width: 768px) {
 }
 
-
 /* Laptops and Desktop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .sidebar {
     width: 15%;
     height: 100vh;
@@ -93,11 +88,11 @@
     bottom: 0;
     left: 0;
   }
-  
+
   .main-body {
     height: 100vh;
   }
-  
+
   .item1:hover #items {
     color: '#efefef';
   }
@@ -109,7 +104,7 @@
     gap: 0.5rem;
     align-items: center;
   }
-  .logo {
+  .school-logo {
     width: 4rem;
     height: 4rem;
     margin-top: 0;
@@ -131,31 +126,29 @@
     color: black;
     text-decoration: none;
   }
-  .item1:hover  {
-    background-color: #a7a7a7a7;
-    
+  .item1:hover {
+    background-color: #9b2fae;
   }
-  .item1:active  {
-    background-color: #a7a7a7a7;
-    
+  .item1:active {
+    background-color: #9b2fae;
   }
-  .item1:hover #items,.item1:hover #dashb-icon {
+  .item1:hover #items,
+  .item1:hover #dashb-icon {
     color: #ffffff;
-    
   }
-  
-  .item1:active #items,.item1:active #dashb-icon {
+
+  .item1:active #items,
+  .item1:active #dashb-icon {
     color: #ffffff;
-    
   }
-#items{
-  display: block;
-}
+  #items {
+    display: block;
+  }
 
   #dashb-icon {
     padding-right: 1rem;
   }
-  
+
   #sch-name {
     display: block;
     text-align: left;
