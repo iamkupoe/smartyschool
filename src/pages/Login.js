@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Login.css";
 import SchoolLogo from "../assets/images/school_logo.png";
+import {Link} from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -21,9 +22,9 @@ const Login = () => {
           </label>
           <a href="#" className="forgotPasswordLink">forgot password?</a>
 
-          <button id="sub" type="Login">
+          <Link to="/dashboard" id="sub" type="Login">
             Login
-          </button>
+          </Link>
         </form>
       </div>
     </div>
