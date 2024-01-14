@@ -9,7 +9,7 @@ const Register = () => {
           <button
             class="paymentTab-register"
             id="paymentTabId"
-            onclick="ClickRegisterBookTab()"
+            onclick="ClickRegisterBookTab"
           >
             <span class="icon icon-book registerBookTabIcon"></span>
           </button>
