@@ -1,15 +1,104 @@
-.main-container {
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebarContainer {
+  width: 15%;
+  height: 100vh;
+  background-color: #c0cac2;
+}
+
+.workspacePanel {
+  width: 85%;
+  margin: 0;
+  padding: 0;
+}
+
+.item1:hover #items {
+  color: '#efefef';
+}
+.logo-container {
+  border-bottom: 1px solid rgb(212, 212, 226);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+}
+.school-logo {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  margin-top: 0;
+  padding-top: 0;
+  border-radius: 50%;
+}
+.itemContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sidebarButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #a7a7a7a7;
+  height: 2.3rem;
+  padding: 3px 0 3px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+#items {
+  display: none;
+}
+.item1:hover {
+  background-color: #a7a7a7a7;
+}
+.item1:active {
+  background-color: #a7a7a7a7;
+}
+.item1:hover #items,
+.item1:hover #dashb-icon {
+  color: #ffffff;
+}
+
+.item1:active #items,
+.item1:active #dashb-icon {
+  color: #ffffff;
+}
+#dashb-icon {
+  padding-right: 1rem;
+}
+
+#sch-name {
+  display: none;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+}
+
+/* Laptops and Desktop */
+@media screen and (min-width: 1024px) {
+  .categories-box {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-   text-align: center;
-   width: 100%;
+    gap: 0.8rem;
+    flex-wrap: wrap;
   }
-  
-  .toolsPanel{
+  .sidebar {
     width: 15%;
+    height: 100vh;
+    background-color: #c0cac2;
+    position: fixed;
+    padding-top: 0;
+    bottom: 0;
+    left: 0;
   }
-  .workspacePanel{
-    width: 85%;
-    padding:0 2rem;
-  }
+}
