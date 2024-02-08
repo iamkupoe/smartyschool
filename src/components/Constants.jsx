@@ -8,47 +8,47 @@ export const summaryData = [
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: <FaGraduationCap color="#fff" size={50} />,
+    icon: <FaGraduationCap className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
     name: 'Transport fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: <FaBus color="#fff" size={50} />,
+    icon: <FaBus className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
     name: 'Exams fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: <AiFillFileText color="#fff" size={50} />,
+    icon: <AiFillFileText className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
     name: 'Feeding fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: <MdFastfood color="#fff" size={50} />,
+    icon: <MdFastfood className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
     name: 'Toiletories fee',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: <FaToiletPaper color="#fff" size={50} />,
+    icon: <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
 ];
 
 export const attendanceData = [
-  { name: 'Mon', boys: 50, girls: 59, amt: 2400 },
-  { name: 'Tue', boys: 45, girls: 70, amt: 2400 },
-  { name: 'Wed', boys: 48, girls: 72, amt: 2400 },
-  { name: 'Thu', boys: 50, girls: 70, amt: 2400 },
-  { name: 'Fri', boys: 53, girls: 73, amt: 2400 },
+  { name: 'Mon', Boys: 50, Girls: 59, amt: 2400 },
+  { name: 'Tue', Boys: 45, Girls: 70, amt: 2400 },
+  { name: 'Wed', Boys: 48, Girls: 72, amt: 2400 },
+  { name: 'Thu', Boys: 50, Girls: 70, amt: 2400 },
+  { name: 'Fri', Boys: 53, Girls: 73, amt: 2400 },
 ];
 
 export const enrollmentData = [
-  { name: 'Boys', value: 60 },
-  { name: 'Girls', value: 44 },
+  { name: 'Boys', value: 60, fill:'#1338be' },
+  { name: 'Girls', value: 44, fill:'#3cb043'},
 ];
