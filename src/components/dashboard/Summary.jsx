@@ -20,7 +20,7 @@ import {
 function Summary() {
   const COLORS = ['#0088FE', '#00C49F'];
   return(
-    <div className="main-container-summary">
+    <div className="flex flex-col  h-[95vh] overflow-y-auto">
       <div className="fees-container">
         <h2>Fees payment</h2>
         <div className="categories-box">
@@ -37,7 +37,7 @@ function Summary() {
           })}
         </div>
       </div>
-      <div className="enrollment-attendance-container">
+      <div className="flex flex-col">
         <div className="attendance-container">
           <h2>Attendance</h2>
           <div className='attendance-chart-box'>
