@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';;
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Summary from './components/dashboard/Summary';
 import Register from './components/dashboard/Register';
 import Fees from './components/dashboard/Fees';
@@ -9,6 +9,7 @@ import Reports from './components/dashboard/Reports';
 import Settings from './components/dashboard/Settings';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Profile from './components/dashboard/Profile';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'dashboard',
-    element: <Dashboard /> ,
+    element: <Dashboard />,
     children: [
       {
         path: '',
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'summary',
         element: <Summary />,
+      },
+      {
+        path: 'profile',
+        element: <Profile />,
       },
       {
         path: 'register',
@@ -53,4 +58,3 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
