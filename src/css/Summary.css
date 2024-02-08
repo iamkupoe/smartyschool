@@ -1,0 +1,65 @@
+.main-container-summary {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fees-container {
+  border: 1px solid #eeeeee;
+  /* padding: 1rem 0.8rem;
+  width: 100%; */
+}
+.fees-container > h2 {
+  text-align: left;
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.categories-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.enrollment-attendance-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.attendance-container {
+  border: solid 1px #ededed;
+  padding-right: 1rem;
+  width: 100%;
+}
+.attendance-chart-box {
+  width: 100%;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+}
+
+/* Laptops and Desktop */
+@media screen and (min-width: 1024px) {
+  .categories-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .enrollment-attendance-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.5rem;
+  }
+
+  .attendance-chart-box {
+    width: 60%;
+  }
+}
