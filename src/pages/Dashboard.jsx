@@ -29,8 +29,8 @@ const Dashboard = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col bg-[#dcdcdc] w-[15%] h-[100vh]">
-        <div className="flex flex-row justify-center items-center bg-[#c8c8c8] px-[0.2rem] py-[0.5rem] 2xl:px-[0.8rem] 2xl:py-[1rem]">
+      <div className="flex flex-col border-r border-r-[1px] border-r-[#c8c8c8] w-[15%] h-[100vh]">
+        <div className="flex flex-row justify-center items-center border-b border-b-[#d8d8d8] px-[0.2rem] py-[0.5rem] 2xl:px-[0.8rem] 2xl:py-[1rem] h-[12vh]">
           <img
             src={logo}
             alt="School Logo"
