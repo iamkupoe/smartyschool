@@ -10,6 +10,8 @@ import Settings from './components/dashboard/Settings';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Profile from './components/dashboard/Profile';
+import StudentsList from './components/dashboard/register/StudentsList';
+import RegistrationForm from './components/dashboard/register/RegistrationForm';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,20 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
+        children: [
+          {
+            path: '',
+            element: <StudentsList />,
+          },
+          {
+            path: 'registrations',
+            element: <StudentsList />,
+          },
+          {
+            path: 'registration-form',
+            element: <RegistrationForm />
+          },
+        ],
       },
       {
         path: 'fees',
