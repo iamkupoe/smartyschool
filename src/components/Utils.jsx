@@ -11,6 +11,7 @@ export const getCurrentUrl = (url) => {
   } else if (
     current === 'fees' ||
     current === 'fees/payments' ||
+    current === 'fees/feeding-pay' ||
     current === 'fees/payment-form'
   ) {
     displayUrl = 'fees';
@@ -49,8 +50,8 @@ export const getFeesCurrentScreen = (url) => {
     displayUrl = 'payments';
   } else if (current === 'payment-form') {
     displayUrl = 'payment-form';
-  } else if (current === 'feeding-payment') {
-    displayUrl = 'feeding-payment';
+  } else if (current === 'feeding-pay') {
+    displayUrl = 'feeding-pay';
   }
   return displayUrl;
 };
