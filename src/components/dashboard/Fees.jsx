@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineUserAdd, AiOutlineUsergroupAdd } from 'react-icons/ai';
+import { GiMoneyStack, GiPayMoney } from 'react-icons/gi';
+import {
+  MdOutlinePayments,
+  MdListAlt,
+  MdOutlineFastfood,
+} from 'react-icons/md';
 import { PiBooksThin } from 'react-icons/pi';
 import { Link, Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -15,7 +21,6 @@ function Fees() {
 
   useEffect(() => {
     setCurrentUrl(getFeesCurrentScreen(location.pathname));
-    console.log("current:",currentUrl)
   }, [location.pathname]);
 
   return (
@@ -27,7 +32,7 @@ function Fees() {
             currentUrl === 'payments' ? 'bg-[#000]' : ''
           }`}
         >
-          <PiBooksThin className={`${menuBtnIconStyle}`} />
+          <GiMoneyStack className={`${menuBtnIconStyle}`} />
           <span className={`${menuBtnTextStyle}`}>payments</span>
         </Link>
         <Link
@@ -36,12 +41,17 @@ function Fees() {
           }`}
           to="/dashboard/fees/payment-form"
         >
-          <AiOutlineUsergroupAdd className={`${menuBtnIconStyle} `} />
-          <span className={`${menuBtnTextStyle}`}>student</span>
+          <GiPayMoney className={`${menuBtnIconStyle} `} />
+          <span className={`${menuBtnTextStyle}`}>payform</span>
         </Link>
-        <Link className={`${menuButtonsStyle}`}>
-          <AiOutlineUserAdd className={`${menuBtnIconStyle}`} />
-          <span className={`${menuBtnTextStyle}`}>tutor</span>
+        <Link
+          className={`${menuButtonsStyle} ${
+            currentUrl === 'feeding-pay' ? 'bg-[#000]' : ''
+          }`}
+          to="/dashboard/fees/feeding-pay"
+        >
+          <MdOutlineFastfood className={`${menuBtnIconStyle}`} />
+          <span className={`${menuBtnTextStyle}`}>feeding</span>
         </Link>
       </section>
       <section>
