@@ -14,6 +14,7 @@ import StudentsList from './components/dashboard/register/StudentsList';
 import RegistrationForm from './components/dashboard/register/RegistrationForm';
 import PaymentList from './components/dashboard/fees/PaymentList';
 import PaymentForm from './components/dashboard/fees/PaymentForm';
+import FeedingPayment from './components/dashboard/fees/FeedingPayment';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
           {
             path: 'payment-form',
             element: <PaymentForm />,
+          },
+          {
+            path: 'feeding-pay',
+            element: <FeedingPayment />,
           },
         ],
       },
