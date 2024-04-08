@@ -14,7 +14,7 @@ const PaymentForm = () => {
   const titleInputContainer = 'mb-[0.5rem]';
   const titleText = 'font-bold w-full';
   const sectionContainer =
-    'px-[0.4rem] flex flex-col md:flex-row md:gap-[0.5rem]';
+    'px-[0.4rem] flex flex-col md:flex-row md:gap-[0.5rem] md:my-[0.75rem]';
   const textInputStyle =
     'border border-[#525252] rounded-sm px-[0.2rem] py-[0.1rem] w-full outline-none';
 
@@ -33,16 +33,30 @@ const PaymentForm = () => {
     setPaymentMode(e.target.value);
   };
 
+  const customStyles = {
+    control: (provide) => ({
+      ...provide,
+      border: '1px solid #525252',
+    }),
+  };
+
   return (
-    <div className="mx-[0.5rem]">
-      <div>
-        <div>
-          <h2>Dashen Hills Montessori</h2>
-          <h3>Payment Form</h3>
+    <div
+      className="mx-[0.4rem] my-[1.5rem] sm:mx-[3rem] sm:my-[3rem] lg:mx-[6rem] xl:mx-[7rem]  h-[70vh] overflow-y-auto"
+      style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}
+    >
+      <div className="p-[0.3rem] sm:p-[2rem] xl:px-[4rem] border border-[#eeeeee] shadow-xl ">
+        <div className="px-[0.4rem] flex flex-col md:gap-[0.5rem] border-b border-b-[#eeeeee] pb-[1rem]">
+          <h2 className="font-bold text-center text-[1.3rem] lg:text-[2.2rem]">
+            Dashen Hills Montessori
+          </h2>
+          <h3 className="text-center text-[1rem] lg:text-[1.5rem] font-bold">
+            Payment Form
+          </h3>
         </div>
-        <form>
+        <form className="py-[1rem]">
           <div className={sectionContainer}>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+            <div className={`${titleInputContainer} md:w-[50%]`}>
               <div className={titleText}>Amount</div>
               <input
                 type="text"
@@ -53,7 +67,7 @@ const PaymentForm = () => {
                 className={textInputStyle}
               />
             </div>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+            <div className={`${titleInputContainer} md:w-[50%]`}>
               <div className={titleText}>Paid as</div>
               <input
                 type="text"
@@ -67,7 +81,7 @@ const PaymentForm = () => {
             </div>
           </div>
           <div className={sectionContainer}>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+            <div className={`${titleInputContainer} md:w-[65%]`}>
               <div className={titleText}>Paid by</div>
               <input
                 type="text"
@@ -78,7 +92,7 @@ const PaymentForm = () => {
                 className={textInputStyle}
               />
             </div>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+            <div className={`${titleInputContainer} md:w-[35%]`}>
               <div className={titleText}>Payer's contact</div>
               <input
                 type="text"
@@ -89,8 +103,8 @@ const PaymentForm = () => {
               />
             </div>
           </div>
-          <div>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+          <div className={sectionContainer}>
+            <div className={`${titleInputContainer} md:w-full`}>
               <div className={titleText}>Paid for</div>
 
               {
@@ -99,13 +113,14 @@ const PaymentForm = () => {
                   onChange={handleChosenOption}
                   isSearchable={true}
                   options={options}
+                  styles={customStyles}
                   placeholder="Enter student name to search"
                 />
               }
             </div>
           </div>
           <div className={sectionContainer}>
-            <div className={`${titleInputContainer} md:w-[27%]`}>
+            <div className={`${titleInputContainer} md:w-[50%]`}>
               <div className={titleText}>Payment mode</div>
               <select
                 value={paymentMode}
@@ -117,7 +132,7 @@ const PaymentForm = () => {
               </select>
             </div>
             <div
-              className={`${titleInputContainer} md:w-[27%] ${
+              className={`${titleInputContainer} md:w-[50%] ${
                 paymentMode === 'momo' ? 'block' : 'hidden'
               }`}
             >
@@ -131,8 +146,10 @@ const PaymentForm = () => {
               />
             </div>
           </div>
-          <div>
-            <button>Submit</button>
+          <div className={`${sectionContainer} my-[1rem] justify-center`}>
+            <button className="bg-[#0073cf] text-[#fff] p-[0.25rem] w-full md:w-[20rem] rounded-md outline-none">
+              Submit
+            </button>
           </div>
         </form>
       </div>
