@@ -61,7 +61,7 @@ const FeedingPayment = () => {
             return (
               <div
                 className={`flex flex-row gap-[1rem] ${
-                  (index + 1) % 2 === 0 ? 'bg-[#eeeeee]' : ''
+                  (index + 1) % 2 === 1 ? 'bg-[#eeeeee]' : ''
                 }`}
               >
                 <div className={`w-[45%] text-[0.8rem] p-[0.2rem]`}>
@@ -74,11 +74,11 @@ const FeedingPayment = () => {
               </div>
             );
           })}
-          <div className={`flex flex-row gap-[1rem] `}>
+          <div className={`flex flex-row gap-[1rem] bg-[#eeeeee]`}>
             <div className="w-[65%] text-[0.8rem] font-bold p-[0.2rem] text-right">
               Total
             </div>
-            <div className="w-[35%] text-[0.8rem] p-[0.2rem] pl-[0.2rem]">{`GH₵ 100`}</div>
+            <div className="w-[35%] text-[0.8rem] p-[0.2rem] pl-[0.5rem]">{`GH₵ 1400`}</div>
           </div>
         </div>
       </div>
