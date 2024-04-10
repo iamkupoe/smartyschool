@@ -52,7 +52,10 @@ const StudentsList = () => {
         </div>
       </div>
 
-      <div className="h-[68vh] overflow-y-auto mt-[0.25rem]">
+      <div
+        className="h-[68vh] overflow-y-auto mt-[0.25rem]"
+        style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}
+      >
         <div
           className={`flex flex-row py-[0.5rem] sticky top-0 bg-[#c2c2c2] px-[0.25rem] py-[0.2rem] border-b border-b-[#c2c2c2] w-[39.8rem] lg:w-full`}
         >
