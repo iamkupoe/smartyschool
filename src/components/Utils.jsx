@@ -8,7 +8,12 @@ export const getCurrentUrl = (url) => {
     displayUrl = 'profile';
   } else if (current === 'profile') {
     displayUrl = 'profile';
-  } else if (current === 'fees') {
+  } else if (
+    current === 'fees' ||
+    current === 'fees/payments' ||
+    current === 'fees/feeding-pay' ||
+    current === 'fees/payment-form'
+  ) {
     displayUrl = 'fees';
   } else if (current === 'reports') {
     displayUrl = 'reports';
@@ -17,7 +22,7 @@ export const getCurrentUrl = (url) => {
   } else if (
     current === 'register' ||
     current === 'register/registrations' ||
-    'register/registration-form'
+    current === 'register/registration-form'
   ) {
     displayUrl = 'register';
   }
@@ -33,6 +38,20 @@ export const getRegisterCurrentScreen = (url) => {
     displayUrl = 'registration-form';
   } else if (current === 'register-tutor') {
     displayUrl = 'register-tutor';
+  }
+  return displayUrl;
+};
+
+export const getFeesCurrentScreen = (url) => {
+  const current = url.slice(16, location.pathname.length);
+  let displayUrl = 'payments';
+
+  if (current === '' || current === 'payments') {
+    displayUrl = 'payments';
+  } else if (current === 'payment-form') {
+    displayUrl = 'payment-form';
+  } else if (current === 'feeding-pay') {
+    displayUrl = 'feeding-pay';
   }
   return displayUrl;
 };

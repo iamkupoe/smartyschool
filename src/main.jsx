@@ -12,6 +12,9 @@ import Dashboard from './pages/Dashboard';
 import Profile from './components/dashboard/Profile';
 import StudentsList from './components/dashboard/register/StudentsList';
 import RegistrationForm from './components/dashboard/register/RegistrationForm';
+import PaymentList from './components/dashboard/fees/PaymentList';
+import PaymentForm from './components/dashboard/fees/PaymentForm';
+import FeedingPayment from './components/dashboard/fees/FeedingPayment';
 
 const router = createBrowserRouter([
   {
@@ -48,13 +51,31 @@ const router = createBrowserRouter([
           },
           {
             path: 'registration-form',
-            element: <RegistrationForm />
+            element: <RegistrationForm />,
           },
         ],
       },
       {
         path: 'fees',
         element: <Fees />,
+        children: [
+          {
+            path: '',
+            element: <PaymentList />,
+          },
+          {
+            path: 'payments',
+            element: <PaymentList />,
+          },
+          {
+            path: 'payment-form',
+            element: <PaymentForm />,
+          },
+          {
+            path: 'feeding-pay',
+            element: <FeedingPayment />,
+          },
+        ],
       },
       {
         path: 'reports',
