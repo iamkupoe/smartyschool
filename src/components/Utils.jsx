@@ -55,3 +55,16 @@ export const getFeesCurrentScreen = (url) => {
   }
   return displayUrl;
 };
+
+export const getTutorDashboardUrlNow = (url) => {
+  const current = url.slice(17, location.pathname.length);
+  let displayUrl = 'attendance';
+  if (current === '' || current === 'attendance') {
+    displayUrl = 'attendance';
+  } else if (current === 'performance') {
+    displayUrl = 'performance';
+  } else if (current === 'account') {
+    displayUrl = 'account';
+  }
+  return displayUrl;
+};
