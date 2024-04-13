@@ -1,7 +1,7 @@
-import React from "react";
-import "../css/Login.css";
-import SchoolLogo from "../assets/images/school_logo.png";
-import {Link} from 'react-router-dom'
+import React from 'react';
+import '../css/Login.css';
+import SchoolLogo from '../assets/images/school_logo.png';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -20,9 +20,11 @@ const Login = () => {
             Password:
             <input type="password" name="password" className="text-input" />
           </label>
-          <a href="#" className="forgotPasswordLink">forgot password?</a>
+          <a href="#" className="forgotPasswordLink">
+            forgot password?
+          </a>
 
-          <Link to="/dashboard" id="sub" type="Login">
+          <Link to="/tutor-dashboard" id="sub" type="Login">
             Login
           </Link>
         </form>
