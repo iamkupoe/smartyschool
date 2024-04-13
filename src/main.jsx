@@ -15,6 +15,10 @@ import RegistrationForm from './components/dashboard/register/RegistrationForm';
 import PaymentList from './components/dashboard/fees/PaymentList';
 import PaymentForm from './components/dashboard/fees/PaymentForm';
 import FeedingPayment from './components/dashboard/fees/FeedingPayment';
+import TutorDashboard from './pages/TutorDashboard';
+import Account from './components/tutor_dashboard/account/Account';
+import Attendance from './components/tutor_dashboard/attendance/Attendance';
+import Performance from './components/tutor_dashboard/performance/Performance';
 
 const router = createBrowserRouter([
   {
@@ -84,6 +88,24 @@ const router = createBrowserRouter([
       {
         path: 'settings',
         element: <Settings />,
+      },
+    ],
+  },
+  {
+    path: 'tutor-dashboard',
+    element: <TutorDashboard />,
+    children: [
+      {
+        path: 'account',
+        element: <Account />,
+      },
+      {
+        path: 'attendance',
+        element: <Attendance />,
+      },
+      {
+        path: 'performance',
+        element: <Performance />,
       },
     ],
   },
