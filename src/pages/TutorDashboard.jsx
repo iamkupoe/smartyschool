@@ -3,8 +3,9 @@ import '../css/Dashboard.css';
 import { Outlet } from 'react-router-dom';
 import logo from '../assets/images/school_logo.png';
 import { RiProfileFill } from 'react-icons/ri';
-import { HiUserAdd } from 'react-icons/hi';
-import { MdPayment } from 'react-icons/md';
+import { BiBarChart } from "react-icons/bi";
+import { BsPersonCheck } from 'react-icons/bs';
+import { IoBarChartSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { getCurrentUrl, getTutorDashboardUrlNow } from '../components/Utils';
@@ -64,7 +65,7 @@ const TutorDashboard = () => {
               currentUrl === 'attendance' ? 'bg-[#141414]' : ''
             }`}
           >
-            <HiUserAdd
+            <BsPersonCheck
               className={`${sidebarBtnIcon} ${
                 currentUrl === 'attendance' ? 'text-[#f0f0f0]' : ''
               }`}
@@ -83,7 +84,7 @@ const TutorDashboard = () => {
               currentUrl === 'performance' ? 'bg-[#141414]' : ''
             }`}
           >
-            <MdPayment
+            <BiBarChart
               className={`${sidebarBtnIcon} ${
                 currentUrl === 'performance' ? 'text-[#f0f0f0]' : ''
               }`}
