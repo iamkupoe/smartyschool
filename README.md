@@ -39,8 +39,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Settings screen:** This screen is where the settings about school management are done. On this screen, you can set the fees for various classes.
-- **Report screen:** This screen is where all reports including the attendance report, fees report, performance report are generated.
+- **Settings screen:** This screen is where the settings about school management are done. On this screen, you can set the fees for various classes. 
+- **Report screen:** This screen is where all reports including the attendance report, fees report, performance report, enrollment report are generated.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
