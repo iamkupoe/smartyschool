@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/Login.css';
 import SchoolLogo from '../assets/images/school_logo.png';
 import { Link } from 'react-router-dom';
 
