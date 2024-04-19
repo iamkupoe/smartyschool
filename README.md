@@ -22,7 +22,7 @@
 
 # 📖 Smarty School <a name="about-project"></a>
 
-**Smarty School** is a School management web application built to help manage the afairs of a school.
+**Smarty School** is a School management web application built to help manage the afairs of a school anc to facilitate the work of all entities that make up a school.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
