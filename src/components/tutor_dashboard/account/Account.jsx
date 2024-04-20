@@ -9,10 +9,10 @@ const Account = () => {
     <div>
       <div className="">
         <div className="h-[12vh] border-b border-b-[#c8c8c8]"></div>
-        <div className="mx-[0.5rem] md:[1rem] p-[0.75rem] md:p-[2rem] flex flex-col h-[80vh] overflow-y-auto">
+        <div className="mx-[0.5rem] md:mx-[1rem] p-[0.75rem] md:p-[2rem] lg:mx-[2rem] lg:p-[2.5rem] flex flex-col h-[80vh] overflow-y-auto">
           <div className="self-end">edit icon</div>
           <div className="flex flex-col sm:flex-row gap-[1rem]">
-            <div className="w-full h-[40%] sm:h-[80%] md:w-[50%] md:h-[70%]">
+            <div className="w-full h-[40%] sm:h-[80%] md:w-[50%] md:h-[70%] lg:h-[60%] lg:w-[40%]">
               <img src={profilePic} className="h-full w-full" />
             </div>
             <div className="md:w-[50%]">
@@ -26,7 +26,7 @@ const Account = () => {
                     type="text"
                     name="fullname"
                     id=""
-                    disabled
+                    disabled={true}
                   />
                 </div>
                 <div className={labelInputBox}>
