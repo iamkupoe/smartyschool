@@ -73,7 +73,7 @@ const Account = () => {
                     className="w-full h-full object-contain object-center"
                   />
                 ) : (
-                  <div className="border-2 border-dashed border-gray-400 w-64 h-64  flex items-center justify-center">
+                  <div className="border-2 border-dashed border-gray-400 w-full h-64 lg:h-80 xl:h-120 flex items-center justify-center">
                     <span className="text-gray-400">Select an Image</span>
                   </div>
                 )}
