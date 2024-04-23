@@ -19,6 +19,8 @@ import TutorDashboard from './pages/TutorDashboard';
 import Account from './components/tutor_dashboard/account/Account';
 import Attendance from './components/tutor_dashboard/attendance/Attendance';
 import Performance from './components/tutor_dashboard/performance/Performance';
+import AttendanceList from './components/tutor_dashboard/attendance/AttendanceList';
+import MarkAttendance from './components/tutor_dashboard/attendance/MarkAttendance';
 
 const router = createBrowserRouter([
   {
@@ -102,6 +104,16 @@ const router = createBrowserRouter([
       {
         path: 'attendance',
         element: <Attendance />,
+        children: [
+          {
+            path: 'attendance-list',
+            element: <AttendanceList />,
+          },
+          {
+            path: 'mark-attendance',
+            element: <MarkAttendance />,
+          },
+        ],
       },
       {
         path: 'performance',
