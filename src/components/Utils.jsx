@@ -68,3 +68,15 @@ export const getTutorDashboardUrlNow = (url) => {
   }
   return displayUrl;
 };
+export const getAttendanceCurrentUrl = (url) => {
+  const current = url.slice(28, location.pathname.length);
+  let displayUrl = 'attendance-list';
+  if (current === '' || current === 'attendance-list') {
+    displayUrl = 'attendance-list';
+  } else if (current === 'mark-attendance') {
+    displayUrl = 'mark-attendance';
+  } else if (current === 'mark-attendance') {
+    displayUrl = 'mark-attendance';
+  }
+  return displayUrl;
+};
