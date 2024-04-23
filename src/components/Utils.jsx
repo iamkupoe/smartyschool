@@ -58,13 +58,13 @@ export const getFeesCurrentScreen = (url) => {
 
 export const getTutorDashboardUrlNow = (url) => {
   const current = url.slice(17, location.pathname.length);
-  let displayUrl = 'attendance';
-  if (current === '' || current === 'attendance') {
-    displayUrl = 'attendance';
+  let displayUrl = 'account';
+  if (current === '' || current === 'account') {
+    displayUrl = 'account';
   } else if (current === 'performance') {
     displayUrl = 'performance';
-  } else if (current === 'account') {
-    displayUrl = 'account';
+  } else if (current === 'attendance') {
+    displayUrl = 'attendance';
   }
   return displayUrl;
 };
