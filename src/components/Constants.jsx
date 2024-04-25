@@ -44,6 +44,15 @@ export const summaryData = [
       <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />
     ),
   },
+  {
+    name: 'Total fees',
+    paid: '8,500',
+    expected: '10,500',
+    balance: '2,000',
+    icon: (
+      <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />
+    ),
+  },
 ];
 
 export const attendanceData = [
