@@ -63,7 +63,11 @@ export const getTutorDashboardUrlNow = (url) => {
     displayUrl = 'account';
   } else if (current === 'performance') {
     displayUrl = 'performance';
-  } else if (current === 'attendance') {
+  } else if (
+    current === 'attendance' ||
+    current === 'attendance/mark-attendance' ||
+    current === 'attendance/attendance-list'
+  ) {
     displayUrl = 'attendance';
   }
   return displayUrl;
