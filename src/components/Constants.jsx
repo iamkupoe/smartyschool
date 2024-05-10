@@ -1,6 +1,8 @@
 import { AiFillFileText } from 'react-icons/ai';
 import { FaBus, FaGraduationCap, FaToiletPaper } from 'react-icons/fa';
 import { MdFastfood } from 'react-icons/md';
+import { TbSum } from 'react-icons/tb';
+import { MdMore } from 'react-icons/md';
 
 export const summaryData = [
   {
@@ -36,22 +38,18 @@ export const summaryData = [
     icon: <MdFastfood className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
-    name: 'Toiletories fee',
+    name: 'Other fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: (
-      <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />
-    ),
+    icon: <MdMore className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
     name: 'Total fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: (
-      <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />
-    ),
+    icon: <TbSum className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
 ];
 
