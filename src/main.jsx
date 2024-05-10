@@ -98,6 +98,10 @@ const router = createBrowserRouter([
     element: <TutorDashboard />,
     children: [
       {
+        path: '',
+        element: <Account />,
+      },
+      {
         path: 'account',
         element: <Account />,
       },
@@ -105,6 +109,10 @@ const router = createBrowserRouter([
         path: 'attendance',
         element: <Attendance />,
         children: [
+          {
+            path: '',
+            element: <AttendanceList />,
+          },
           {
             path: 'attendance-list',
             element: <AttendanceList />,
