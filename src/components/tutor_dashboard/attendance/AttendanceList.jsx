@@ -6,11 +6,11 @@ const AttendanceList = () => {
   const filterContainers = 'border border-[#c8c8c8] px-[0.3rem]';
   const selectStyle = 'text-[0.8rem]';
   const optionStyle = 'text-[0.8rem]';
-  const weekColStyle = 'sticky top-0 bg-gray-200 px-1 py-2 w-[3%]';
-  const totalColStyle = 'sticky top-0 bg-gray-200 px-2 py-2 w-[29%]';
+  const weekColStyle = 'sticky top-0 bg-gray-200 px-1 py-2 w-[5%] ';
+  const totalColStyle = 'sticky top-0 bg-gray-200 px-2 py-2 w-[15%]';
 
   return (
-    <div className="p-[0.5rem] flex flex-col h-[90vh]">
+    <div className="p-[0.5rem] flex flex-col h-[88vh]">
       <div className="flex flex-col md:flex-row justify-between items-start p-[0.5rem] bg-[#eeeeee] mb-[0.75rem]">
         <input
           type="search"
@@ -43,10 +43,10 @@ const AttendanceList = () => {
         </div>
       </div>
       <div className="overflow-x-scroll">
-        <table className="table-fixed">
+        <table className="table-fixed w-[100%]">
           <thead>
             <tr>
-              <th className="sticky top-0 left-0 bg-gray-200 px-2 py-2 z-20 w-[10rem] md:w-[30%]">
+              <th className="sticky top-0 left-0 bg-gray-200 px-2 py-2 z-20 w-[70%] md:w-[30%]">
                 Full name
               </th>
               <th className={weekColStyle}>W1</th>
@@ -68,12 +68,12 @@ const AttendanceList = () => {
           <tbody>
             {[...Array(15)].map((_, rowIndex) => (
               <tr key={rowIndex}>
-                <td className="sticky left-0 bg-[#fff] px-2 py-2 z-10 w-[10rem] md:w-[20%]">
-                  Row {rowIndex + 1}, Column 1
+                <td className="sticky left-0 bg-[#fff] px-2 py-2 z-10 w-[90%] md:w-[30%]">
+                  Nhyiraba Serwaa Dankwah
                 </td>
                 {[...Array(14)].map((_, colIndex) => (
-                  <td key={colIndex} className="px-2 py-2">
-                    Row {rowIndex + 1}, Column {colIndex + 2}
+                  <td key={colIndex} className="px-2 py-2 text-center">
+                    5
                   </td>
                 ))}
               </tr>
