@@ -61,7 +61,11 @@ export const getTutorDashboardUrlNow = (url) => {
   let displayUrl = 'account';
   if (current === '' || current === 'account') {
     displayUrl = 'account';
-  } else if (current === 'performance') {
+  } else if (
+    current === 'performance' ||
+    current === 'performance/performance-list' ||
+    current === 'performance/performance-recording'
+  ) {
     displayUrl = 'performance';
   } else if (
     current === 'attendance' ||
@@ -72,6 +76,7 @@ export const getTutorDashboardUrlNow = (url) => {
   }
   return displayUrl;
 };
+
 export const getAttendanceCurrentUrl = (url) => {
   const current = url.slice(28, location.pathname.length);
   let displayUrl = 'attendance-list';
@@ -79,6 +84,17 @@ export const getAttendanceCurrentUrl = (url) => {
     displayUrl = 'attendance-list';
   } else if (current === 'mark-attendance') {
     displayUrl = 'mark-attendance';
+  }
+  return displayUrl;
+};
+
+export const getPerformanceCurrentUrl = (url) => {
+  const current = url.slice(29, location.pathname.length);
+  let displayUrl = 'performance-list';
+  if (current === '' || current === 'performance-list') {
+    displayUrl = 'performance-list';
+  } else if (current === 'performance-recording') {
+    displayUrl = 'performance-recording';
   } else if (current === 'mark-attendance') {
     displayUrl = 'mark-attendance';
   }
