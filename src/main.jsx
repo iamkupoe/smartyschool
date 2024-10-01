@@ -21,6 +21,8 @@ import Attendance from './components/tutor_dashboard/attendance/Attendance';
 import Performance from './components/tutor_dashboard/performance/Performance';
 import AttendanceList from './components/tutor_dashboard/attendance/AttendanceList';
 import MarkAttendance from './components/tutor_dashboard/attendance/MarkAttendance';
+import PerformanceList from './components/tutor_dashboard/performance/performanceList';
+import RecordPerformance from './components/tutor_dashboard/performance/RecordPerformance';
 
 const router = createBrowserRouter([
   {
@@ -126,6 +128,20 @@ const router = createBrowserRouter([
       {
         path: 'performance',
         element: <Performance />,
+        children: [
+          {
+            path: '',
+            element: <PerformanceList />,
+          },
+          {
+            path: 'performance-list',
+            element: <PerformanceList />,
+          },
+          {
+            path: 'performance-recording',
+            element: <RecordPerformance />,
+          },
+        ],
       },
     ],
   },
