@@ -315,3 +315,29 @@ export const Payments = [
     mode: 'cash',
   },
 ];
+
+export const preschool = ['OWOP', 'Writing', 'Numeracy', 'Science', 'Literacy'];
+
+export const primary = [
+  'OWOP',
+  'History',
+  'English Lanuage',
+  'Mathematics',
+  'ICT',
+  'Science',
+  'French',
+  'Ghanaian Language',
+  'Creative Arts',
+];
+
+export const jhs = [
+  'English Language',
+  'Social Studies',
+  'Mathematics',
+  'Science',
+  'R.M.E',
+  'Ghanaian Language',
+  'Career Technology',
+  'Creative Arts',
+  'I.C.T'
+];
