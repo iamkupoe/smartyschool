@@ -7,6 +7,7 @@ import {
   preschool,
 } from '../../Constants';
 import Select from 'react-select';
+import MarksCard from './MarksCard';
 
 const RecordPerformance = () => {
   const [stage, setStage] = useState('');
@@ -14,6 +15,15 @@ const RecordPerformance = () => {
   const [subject, setSubject] = useState('');
   const [selectedStudent, setSelectedStudent] = useState('');
   const [filteredClass, setFilteredClass] = useState('');
+  const [exercise, setExercise] = useState([
+    { actMark: 7, totalMark: 10 },
+    { actMark: 5, totalMark: 5 },
+    { actMark: 6, totalMark: 10 },
+    { actMark: 18, totalMark: 20 },
+  ]);
+  const [testCounter, setTestCounter] = useState(3);
+  const [practicalCounter, setPracticalCounter] = useState(3);
+
   const customStyles = {
     control: (provide) => ({
       ...provide,
@@ -108,7 +118,22 @@ const RecordPerformance = () => {
           </select>
         </div>
       </section>
-      <section></section>
+      <section className="mx-[1rem] my-[1rem]">
+        <div className="border b-[2px] p-[0.5rem]">
+          {exercise &&
+            exercise.map((ex, index) => {
+              return (
+                <MarksCard
+                  title={`Exercise ${index + 1}`}
+                  actual_mark={ex.actMark}
+                  total_mark={ex.totalMark}
+                />
+              );
+            })}
+        </div>
+        <div></div>
+        <div></div>
+      </section>
     </main>
   );
 };
