@@ -21,8 +21,14 @@ const RecordPerformance = () => {
     { actMark: 6, totalMark: 10 },
     { actMark: 18, totalMark: 20 },
   ]);
-  const [testCounter, setTestCounter] = useState(3);
-  const [practicalCounter, setPracticalCounter] = useState(3);
+  const [tests, setTests] = useState([
+    { actMark: 7, totalMark: 10 },
+    { actMark: 5, totalMark: 5 },
+    { actMark: 6, totalMark: 10 },
+  ]);
+  const [practicals, setPracticals] = useState([
+    { actMark: 22, totalMark: 25 },
+  ]);
 
   const customStyles = {
     control: (provide) => ({
@@ -35,6 +41,16 @@ const RecordPerformance = () => {
 
   const handleChosenStudent = (selectedStudent) => {
     setSelectedStudent(selectedStudent);
+  };
+
+  const handleAddMoreExercise = () => {
+    setExercise([...exercise, { actMark: '', totalMark: '' }]);
+  };
+  const handleAddMoreTests = () => {
+    setTests([...tests, { actMark: '', totalMark: '' }]);
+  };
+  const handleAddMorePracticals = () => {
+    setPracticals([...tests, { actMark: '', totalMark: '' }]);
   };
 
   useEffect(() => {
@@ -118,21 +134,85 @@ const RecordPerformance = () => {
           </select>
         </div>
       </section>
-      <section className="mx-[1rem] my-[1rem]">
-        <div className="border b-[2px] p-[0.5rem]">
-          {exercise &&
-            exercise.map((ex, index) => {
-              return (
-                <MarksCard
-                  title={`Exercise ${index + 1}`}
-                  actual_mark={ex.actMark}
-                  total_mark={ex.totalMark}
-                />
-              );
-            })}
+      <section className="mx-[1rem] my-[1rem] flex flex-col gap-[1.5rem]">
+        <div className="border b-[2px] p-[0.5rem]   ">
+          <div className="flex flex-row justify-between align-center">
+            <p>Exercises</p>
+            <a className="text-[0.8rem]" onClick={handleAddMoreExercise}>
+              add more
+            </a>
+          </div>
+          <div className="overflow-y-scroll h-[55vh] ">
+            {exercise &&
+              exercise.map((ex, index) => {
+                return (
+                  <MarksCard
+                    title={`Exercise ${index + 1}`}
+                    actual_mark={ex.actMark}
+                    total_mark={ex.totalMark}
+                  />
+                );
+              })}
+          </div>
+
+          <input
+            type="submit"
+            value="save"
+            className="w-[100%] bg-[#4169e1] text-[#ffffff]"
+          />
         </div>
-        <div></div>
-        <div></div>
+        <div className="border b-[2px] p-[0.5rem] ">
+          <div className="flex flex-row justify-between align-center">
+            <p>Tests</p>
+            <a className="text-[0.8rem]" onClick={handleAddMoreTests}>
+              add more
+            </a>
+          </div>
+          <div className="overflow-y-scroll h-[40vh] ">
+            {tests &&
+              tests.map((ex, index) => {
+                return (
+                  <MarksCard
+                    title={`Assessment Test ${index + 1}`}
+                    actual_mark={ex.actMark}
+                    total_mark={ex.totalMark}
+                  />
+                );
+              })}
+          </div>
+
+          <input
+            type="submit"
+            value="save"
+            className="w-[100%] bg-[#4169e1] text-[#ffffff]"
+          />
+        </div>
+        <div className="border b-[2px] p-[0.5rem]">
+          <div className="flex flex-row justify-between align-center">
+            <p>Practicals</p>
+            <a className="text-[0.8rem]" onClick={handleAddMorePracticals}>
+              add more
+            </a>
+          </div>
+          <div className="overflow-y-scroll h-[15vh] ">
+            {practicals &&
+              practicals.map((ex, index) => {
+                return (
+                  <MarksCard
+                    title={`Practical ${index + 1}`}
+                    actual_mark={ex.actMark}
+                    total_mark={ex.totalMark}
+                  />
+                );
+              })}
+          </div>
+
+          <input
+            type="submit"
+            value="save"
+            className="w-[100%] bg-[#4169e1] text-[#ffffff]"
+          />
+        </div>
       </section>
     </main>
   );
