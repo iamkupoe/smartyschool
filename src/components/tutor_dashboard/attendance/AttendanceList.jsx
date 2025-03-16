@@ -6,8 +6,8 @@ const AttendanceList = () => {
   const filterContainers = 'border border-[#c8c8c8] px-[0.3rem]';
   const selectStyle = 'text-[0.8rem]';
   const optionStyle = 'text-[0.8rem]';
-  const weekColStyle = 'sticky top-0 bg-gray-200 px-1 py-2 w-[5%] ';
-  const totalColStyle = 'sticky top-0 bg-gray-200 px-2 py-2 w-[15%]';
+  const weekColStyle = 'sticky top-0 bg-gray-200 px-1 py-2 w-[5%]';
+  const totalColStyle = 'sticky top-0 bg-gray-200 px-2 py-2 w-[15%] xl:w-[10%]';
 
   return (
     <div className="p-[0.5rem] flex flex-col h-[88vh]">
@@ -43,10 +43,10 @@ const AttendanceList = () => {
         </div>
       </div>
       <div className="overflow-x-scroll">
-        <table className="table-fixed w-[100%]">
-          <thead>
+        <table className="table-fixed w-[1000px] lg:w-[100%]">
+          <thead className='w-[100%]'>
             <tr>
-              <th className="sticky top-0 left-0 bg-gray-200 px-2 py-2 z-20 w-[70%] md:w-[30%]">
+              <th className="sticky top-0 left-0 bg-gray-200 px-2 py-2 z-20 w-[14%] xl:w-[19%]">
                 Full name
               </th>
               <th className={weekColStyle}>W1</th>
@@ -66,10 +66,10 @@ const AttendanceList = () => {
               <th className={totalColStyle}>Total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='w-[100%]'>
             {[...Array(15)].map((_, rowIndex) => (
-              <tr key={rowIndex}>
-                <td className="sticky left-0 bg-[#fff] px-2 py-2 z-10 w-[90%] md:w-[30%]">
+              <tr key={rowIndex} className=' overflow-auto'>
+                <td className="sticky left-0 bg-[#fff] px-2 py-2 z-10">
                   Nhyiraba Serwaa Dankwah
                 </td>
                 {[...Array(15)].map((_, colIndex) => (
