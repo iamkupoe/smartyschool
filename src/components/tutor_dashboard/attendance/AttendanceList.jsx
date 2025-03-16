@@ -50,6 +50,7 @@ const AttendanceList = () => {
                 Full name
               </th>
               <th className={weekColStyle}>W1</th>
+              <th className={weekColStyle}>W2</th>
               <th className={weekColStyle}>W3</th>
               <th className={weekColStyle}>W4</th>
               <th className={weekColStyle}>W5</th>
@@ -71,10 +72,11 @@ const AttendanceList = () => {
                 <td className="sticky left-0 bg-[#fff] px-2 py-2 z-10 w-[90%] md:w-[30%]">
                   Nhyiraba Serwaa Dankwah
                 </td>
-                {[...Array(14)].map((_, colIndex) => (
+                {[...Array(15)].map((_, colIndex) => (
                   <td key={colIndex} className="px-2 py-2 text-center">
                     5
                   </td>
+                  
                 ))}
               </tr>
             ))}
