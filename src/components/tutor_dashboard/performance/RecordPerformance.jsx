@@ -79,8 +79,8 @@ const RecordPerformance = () => {
   }, [stage]);
 
   return (
-    <main>
-      <section className="mx-[1rem] my-[1rem]">
+    <main className='h-[88vh] overflow-x-scroll sm:px-[4rem] md:px-[0.5rem]'>
+      <section className="mx-[1rem] my-[1rem] md:flex md:flex-row justify-between align-top lg:justify-start lg:gap-[1.5rem]">
         <div>
           <div>class</div>
           <select
@@ -134,7 +134,7 @@ const RecordPerformance = () => {
           </select>
         </div>
       </section>
-      <section className="mx-[1rem] my-[1rem] flex flex-col gap-[1.5rem]">
+      <section className="mx-[1rem] my-[1rem] flex flex-col gap-[1.5rem] ">
         <div className="border b-[2px] p-[0.5rem]   ">
           <div className="flex flex-row justify-between align-center">
             <p>Exercises</p>
@@ -142,7 +142,7 @@ const RecordPerformance = () => {
               add more
             </a>
           </div>
-          <div className="overflow-y-scroll h-[55vh] ">
+          <div className=" md:h-[45vh] overflow-y-auto flex flex-row align-top gap-2 flex-wrap ">
             {exercise &&
               exercise.map((ex, index) => {
                 return (
@@ -158,7 +158,7 @@ const RecordPerformance = () => {
           <input
             type="submit"
             value="save"
-            className="w-[100%] bg-[#4169e1] text-[#ffffff]"
+            className="w-[100%] bg-[#4169e1] text-[#ffffff] border-r-md"
           />
         </div>
         <div className="border b-[2px] p-[0.5rem] ">
@@ -168,7 +168,7 @@ const RecordPerformance = () => {
               add more
             </a>
           </div>
-          <div className="overflow-y-scroll h-[40vh] ">
+          <div className="overflow-y-scroll h-[30vh] flex flex-row align-top gap-2 flex-wrap">
             {tests &&
               tests.map((ex, index) => {
                 return (
@@ -194,7 +194,7 @@ const RecordPerformance = () => {
               add more
             </a>
           </div>
-          <div className="overflow-y-scroll h-[15vh] ">
+          <div className="overflow-y-scroll h-[15vh] flex flex-row align-top gap-2 flex-wrap">
             {practicals &&
               practicals.map((ex, index) => {
                 return (
