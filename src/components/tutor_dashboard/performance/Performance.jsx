@@ -40,7 +40,7 @@ const Performance = () => {
         </Link>
       </section>
 
-      <section>
+      <section >
         <Outlet />
       </section>
     </main>
