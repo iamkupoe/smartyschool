@@ -58,9 +58,14 @@ export const getFeesCurrentScreen = (url) => {
 
 export const getTutorDashboardUrlNow = (url) => {
   const current = url.slice(17, location.pathname.length);
-  let displayUrl = 'account';
-  if (current === '' || current === 'account') {
-    displayUrl = 'account';
+  let displayUrl = 'tutor-profile';
+  if (
+    current === '' ||
+    current === 'tutor-profile' ||
+    current === 'tutor-profile/reset-password' ||
+    current === 'tutor-profile/account'
+  ) {
+    displayUrl = 'tutor-profile';
   } else if (
     current === 'performance' ||
     current === 'performance/performance-list' ||
@@ -97,6 +102,17 @@ export const getPerformanceCurrentUrl = (url) => {
     displayUrl = 'performance-recording';
   } else if (current === 'mark-attendance') {
     displayUrl = 'mark-attendance';
+  }
+  return displayUrl;
+};
+
+export const getAccountsCurrentUrl = (url) => {
+  const current = url.slice(31, location.pathname.length);
+  let displayUrl = 'account';
+  if (current === '' || current === 'account') {
+    displayUrl = 'account';
+  } else if (current === 'reset-password') {
+    displayUrl = 'reset-password';
   }
   return displayUrl;
 };
