@@ -23,6 +23,8 @@ import AttendanceList from './components/tutor_dashboard/attendance/AttendanceLi
 import MarkAttendance from './components/tutor_dashboard/attendance/MarkAttendance';
 import PerformanceList from './components/tutor_dashboard/performance/performanceList';
 import RecordPerformance from './components/tutor_dashboard/performance/RecordPerformance';
+import TutorProfile from './components/tutor_dashboard/account/TutorProfile';
+import ResetPassword from './components/tutor_dashboard/account/ResetPassword';
 
 const router = createBrowserRouter([
   {
@@ -101,11 +103,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Account />,
+        element: <TutorProfile />,
       },
       {
-        path: 'account',
-        element: <Account />,
+        path: 'tutor-profile',
+        element: <TutorProfile />,
+        children: [
+          {
+            path: '',
+            element: <Account />,
+          },
+          {
+            path: 'account',
+            element: <Account />,
+          },
+          {
+            path: 'reset-password',
+            element: <ResetPassword />,
+          },
+        ],
       },
       {
         path: 'attendance',
