@@ -3,7 +3,7 @@ import '../css/Dashboard.css';
 import { Outlet } from 'react-router-dom';
 import logo from '../assets/images/school_logo.png';
 import { RiProfileFill } from 'react-icons/ri';
-import { BiBarChart } from "react-icons/bi";
+import { BiBarChart } from 'react-icons/bi';
 import { BsPersonCheck } from 'react-icons/bs';
 import { IoBarChartSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -40,20 +40,22 @@ const TutorDashboard = () => {
         </div>
         <ul className="flex flex-col justify-start items-center gap-[1rem] pt-[1rem]">
           <Link
-            to="/tutor-dashboard/account"
+            to="/tutor-dashboard/tutor-profile"
             className={`${sidebarButtons} ${
-              currentUrl === 'account' ? 'bg-[#141414] text-[#f0f0f0]' : ''
+              currentUrl === 'tutor-profile'
+                ? 'bg-[#141414] text-[#f0f0f0]'
+                : ''
             }`}
           >
             <RiProfileFill
               className={`${sidebarBtnIcon} ${
-                currentUrl === 'account' ? 'text-[#f0f0f0]' : ''
+                currentUrl === 'tutor-profile' ? 'text-[#f0f0f0]' : ''
               }`}
             />
 
             <span
               className={`${sidebarBtnText} ${
-                currentUrl === 'account' ? 'text-[#f0f0f0]' : ''
+                currentUrl === 'tutor-profile' ? 'text-[#f0f0f0]' : ''
               }`}
             >
               Profile
