@@ -341,3 +341,16 @@ export const jhs = [
   'Creative Arts',
   'I.C.T'
 ];
+
+export const performance =[
+  {name:"Nhyiraba Serwaa Dankwah",exercise:"45/50",assignment:"57/60",test:"75/100",practical:"40/45", exams:"870/1000",},
+  {name:"Xavier Sessi",exercise:"46/50",assignment:"54/60",test:"90/100",practical:"30/45", exams:"830/1000",},
+  {name:"Precious Gyamfi",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Priscilla Kwafo",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Blessing Obeng",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Claudia Duker",exercise:"45/50",assignment:"56/60",test:"92/100",practical:"40/45", exams:"860/1000",},
+  {name:"Priscilla Agyapong",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Stephen Oppong",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Micheal Otoo",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Clarabell Antwi",exercise:"43/50",assignment:"47/60",test:"75/100",practical:"36/45", exams:"780/1000",}
+]
