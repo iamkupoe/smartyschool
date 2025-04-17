@@ -41,7 +41,6 @@ const Account = () => {
   return (
     <div>
       <div className="">
-        <div className="h-[12vh] border-b border-b-[#c8c8c8]"></div>
         <div className="mx-[0.5rem] md:mx-[1rem] p-[0.75rem] md:p-[2rem] lg:mx-[2rem] lg:p-[2rem] flex flex-col h-[80vh] overflow-y-auto">
           <div className="self-end">
             <button
