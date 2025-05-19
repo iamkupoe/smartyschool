@@ -6,15 +6,16 @@ const FeedingPayment = () => {
   const [stage, setStage] = useState('');
   const [students, setStudents] = useState([]);
   const [chckblist, setChckblist] = useState(0);
-  const [studentList, setStudentList] = useState(document.getElementById('student-list').children);
+  const [studentList, setStudentList] = useState(document.getElementById('student-list'));
 
   const checkBoxRef = useRef(null);
 
-  const selectAllChckbox = document.getElementById('select-all-chckb')
+  const selectAllChckbox = document.getElementById('select-all-chckb');
+
+  console.log("select:", studentList)
 
   const handleSelectAll = () => {
-    // const selectAllChckbox = document.getElementById('select-all-container').lastChild
-    // const studentList = document.getElementById('student-list').children;
+  
 
     checkBoxRef.current.checked ?
       [...studentList].map((student) => {
