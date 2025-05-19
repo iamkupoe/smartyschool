@@ -37,7 +37,7 @@ const Login = () => {
           </a>
 
           <Link
-            to="/tutor-dashboard"
+            to="/dashboard"
             type="Login"
             className="w-[100%] py-[0.4rem] bg-[#0073cf] text-[#fff] text-center outline-none mt-[0.5rem] text-[1rem] lg:text-[1.25rem]  rounded-sm"
           >

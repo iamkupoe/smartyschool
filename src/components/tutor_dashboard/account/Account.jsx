@@ -11,7 +11,7 @@ const Account = () => {
   const [disability, setDisability] = useState(true);
   const [selectedImage, setSelectedImage] = useState('');
 
-  const handleEnaableInput = () => {
+  const handleEnableInput = () => {
     setDisability(!disability);
   };
 
@@ -45,7 +45,7 @@ const Account = () => {
           <div className="self-end">
             <button
               className="outline-none bg-transparent"
-              onClick={handleEnaableInput}
+              onClick={handleEnableInput}
             >
               <LiaUserEditSolid
                 className={`text-[1.5rem]  ${
