@@ -1,9 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Registrations, classArray } from '../../Constants';
+import { use } from 'react';
 
 const FeedingPayment = () => {
   const [stage, setStage] = useState('');
   const [students, setStudents] = useState([]);
+  const [chckblist, setChckblist] = useState(0);
+  const [studentList, setStudentList] = useState(document.getElementById('student-list').children);
+
+  const checkBoxRef = useRef(null);
+
+  const selectAllChckbox = document.getElementById('select-all-chckb')
+
+  const handleSelectAll = () => {
+    // const selectAllChckbox = document.getElementById('select-all-container').lastChild
+    // const studentList = document.getElementById('student-list').children;
+
+    checkBoxRef.current.checked ?
+      [...studentList].map((student) => {
+        student.children[1].checked = true
+      }) : [...studentList].map((student) => {
+        student.children[1].checked = false
+      });
+    console.log("child:", studentList)
+  }
+
+  useEffect(() => {
+    chckblist > 0 ? (selectAllChckbox.checked = false, setChckblist(0)) : null
+  }, [chckblist]);
+
+  useEffect(() => {
+    setStudentList(document.getElementById('student-list').children);
+  }, [stage]);
 
   useEffect(() => {
     const filteredStudents = Registrations.filter((registrant) => {
@@ -23,6 +51,7 @@ const FeedingPayment = () => {
               value={stage}
               onChange={(e) => {
                 setStage(e.target.value);
+
               }}
             >
               {classArray.map((stage) => {
@@ -36,23 +65,29 @@ const FeedingPayment = () => {
               <div className={`${paymentTitle} w-[20%]`}>Paid</div>
             </div>
             <div
-              className={`${
-                students.length === 0 ? 'hidden' : 'block'
-              } flex flex-row gap-[1rem] p-[0.25rem]`}
+              id='select-all-container'
+              className={`${students.length === 0 ? 'hidden' : 'block'
+                } flex flex-row gap-[1rem] p-[0.25rem]`}
             >
               <div className="w-[80%] text-right">Select all</div>
-              <input type="checkbox" name="Paid" className="text-right" />
+              <input type="checkbox" name="Paid" id='select-all-chckb' ref={checkBoxRef} className="text-right" onChange={() => {
+                console.log("Checkbox:", checkBoxRef.current.checked)
+                handleSelectAll();
+              }} />
             </div>
-            {students.length === 0
-              ? 'No student is enrolled in this class'
-              : students.map((student) => {
+            <div id="student-list">
+
+              {students.length === 0
+                ? 'No student is enrolled in this class'
+                : students.map((student, index) => {
                   return (
-                    <div className="flex flex-row gap-[1rem] p-[0.25rem]">
+                    <div id={`${index}`} className="flex flex-row gap-[1rem] p-[0.25rem]">
                       <div className="w-[80%]">{student}</div>
-                      <input type="checkbox" name="Paid" />
+                      <input type="checkbox" name="Paid" onChange={(e) => { e.currentTarget.checked === false ? setChckblist(index + 1) : null; }} />
                     </div>
                   );
                 })}
+            </div>
           </div>
         </div>
         <div className="h-[20vh] md:h-auto md:w-[45%] overflow-y-auto mb-[1rem] border border-[#C2C2C2] px-[0.25rem] pb-[0.25rem]">
@@ -60,9 +95,8 @@ const FeedingPayment = () => {
           {classArray.map((stage, index) => {
             return (
               <div
-                className={`flex flex-row gap-[1rem] ${
-                  (index + 1) % 2 === 1 ? 'bg-[#eeeeee]' : ''
-                }`}
+                className={`flex flex-row gap-[1rem] ${(index + 1) % 2 === 1 ? 'bg-[#eeeeee]' : ''
+                  }`}
               >
                 <div className={`w-[45%] text-[0.8rem] p-[0.2rem]`}>
                   {stage.name}
