@@ -4,9 +4,7 @@ export const getCurrentUrl = (url) => {
 
   if (current === '' || current === 'summary') {
     displayUrl = 'summary';
-  } else if (current === 'profile') {
-    displayUrl = 'profile';
-  } else if (current === 'profile') {
+  } else if (current === 'profile' || current === 'profile/admin-account' || current === 'profile/reset-password') {
     displayUrl = 'profile';
   } else if (
     current === 'fees' ||
@@ -52,6 +50,18 @@ export const getFeesCurrentScreen = (url) => {
     displayUrl = 'payment-form';
   } else if (current === 'feeding-pay') {
     displayUrl = 'feeding-pay';
+  }
+  return displayUrl;
+};
+
+export const getProfileCurrentScreen = (url) => {
+  const current = url.slice(19, location.pathname.length);
+  let displayUrl = 'admin-account';
+
+  if (current === '' || current === 'admin-account') {
+    displayUrl = 'admin-account';
+  } else if (current === 'reset-password') {
+    displayUrl = 'reset-password';
   }
   return displayUrl;
 };
