@@ -9,7 +9,7 @@ import Reports from './components/dashboard/Reports';
 import Settings from './components/dashboard/Settings';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Profile from './components/dashboard/Profile';
+import Profile from './components/dashboard/profile/Profile';
 import StudentsList from './components/dashboard/register/StudentsList';
 import RegistrationForm from './components/dashboard/register/RegistrationForm';
 import PaymentList from './components/dashboard/fees/PaymentList';
@@ -46,6 +46,21 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <Profile />,
+        children: [
+          {
+            path: '',
+            element: <Account />
+          },
+          {
+            path: 'admin-account',
+            element: <Account />
+          },
+          {
+            path: 'reset-password',
+            element: <ResetPassword />
+          }
+
+        ]
       },
       {
         path: 'register',
