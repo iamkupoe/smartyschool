@@ -9,12 +9,22 @@ import Reports from './components/dashboard/Reports';
 import Settings from './components/dashboard/Settings';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Profile from './components/dashboard/Profile';
+import Profile from './components/dashboard/profile/Profile';
 import StudentsList from './components/dashboard/register/StudentsList';
 import RegistrationForm from './components/dashboard/register/RegistrationForm';
 import PaymentList from './components/dashboard/fees/PaymentList';
 import PaymentForm from './components/dashboard/fees/PaymentForm';
 import FeedingPayment from './components/dashboard/fees/FeedingPayment';
+import TutorDashboard from './pages/TutorDashboard';
+import Account from './components/tutor_dashboard/account/Account';
+import Attendance from './components/tutor_dashboard/attendance/Attendance';
+import Performance from './components/tutor_dashboard/performance/Performance';
+import AttendanceList from './components/tutor_dashboard/attendance/AttendanceList';
+import MarkAttendance from './components/tutor_dashboard/attendance/MarkAttendance';
+import PerformanceList from './components/tutor_dashboard/performance/performanceList';
+import RecordPerformance from './components/tutor_dashboard/performance/RecordPerformance';
+import TutorProfile from './components/tutor_dashboard/account/TutorProfile';
+import ResetPassword from './components/tutor_dashboard/account/ResetPassword';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +46,21 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <Profile />,
+        children: [
+          {
+            path: '',
+            element: <Account />
+          },
+          {
+            path: 'admin-account',
+            element: <Account />
+          },
+          {
+            path: 'reset-password',
+            element: <ResetPassword />
+          }
+
+        ]
       },
       {
         path: 'register',
@@ -84,6 +109,70 @@ const router = createBrowserRouter([
       {
         path: 'settings',
         element: <Settings />,
+      },
+    ],
+  },
+  {
+    path: 'tutor-dashboard',
+    element: <TutorDashboard />,
+    children: [
+      {
+        path: '',
+        element: <TutorProfile />,
+      },
+      {
+        path: 'tutor-profile',
+        element: <TutorProfile />,
+        children: [
+          {
+            path: '',
+            element: <Account />,
+          },
+          {
+            path: 'account',
+            element: <Account />,
+          },
+          {
+            path: 'reset-password',
+            element: <ResetPassword />,
+          },
+        ],
+      },
+      {
+        path: 'attendance',
+        element: <Attendance />,
+        children: [
+          {
+            path: '',
+            element: <AttendanceList />,
+          },
+          {
+            path: 'attendance-list',
+            element: <AttendanceList />,
+          },
+          {
+            path: 'mark-attendance',
+            element: <MarkAttendance />,
+          },
+        ],
+      },
+      {
+        path: 'performance',
+        element: <Performance />,
+        children: [
+          {
+            path: '',
+            element: <PerformanceList />,
+          },
+          {
+            path: 'performance-list',
+            element: <PerformanceList />,
+          },
+          {
+            path: 'performance-recording',
+            element: <RecordPerformance />,
+          },
+        ],
       },
     ],
   },

@@ -1,6 +1,8 @@
 import { AiFillFileText } from 'react-icons/ai';
 import { FaBus, FaGraduationCap, FaToiletPaper } from 'react-icons/fa';
 import { MdFastfood } from 'react-icons/md';
+import { TbSum } from 'react-icons/tb';
+import { MdMore } from 'react-icons/md';
 
 export const summaryData = [
   {
@@ -36,13 +38,18 @@ export const summaryData = [
     icon: <MdFastfood className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
   {
-    name: 'Toiletories fee',
+    name: 'Other fees',
     paid: '8,500',
     expected: '10,500',
     balance: '2,000',
-    icon: (
-      <FaToiletPaper className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />
-    ),
+    icon: <MdMore className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
+  },
+  {
+    name: 'Total fees',
+    paid: '8,500',
+    expected: '10,500',
+    balance: '2,000',
+    icon: <TbSum className="text-[#ffffff] text-[50px] 2xl:text-[80px]" />,
   },
 ];
 
@@ -308,3 +315,42 @@ export const Payments = [
     mode: 'cash',
   },
 ];
+
+export const preschool = ['OWOP', 'Writing', 'Numeracy', 'Science', 'Literacy'];
+
+export const primary = [
+  'OWOP',
+  'History',
+  'English Lanuage',
+  'Mathematics',
+  'ICT',
+  'Science',
+  'French',
+  'Ghanaian Language',
+  'Creative Arts',
+];
+
+export const jhs = [
+  'English Language',
+  'Social Studies',
+  'Mathematics',
+  'Science',
+  'R.M.E',
+  'Ghanaian Language',
+  'Career Technology',
+  'Creative Arts',
+  'I.C.T'
+];
+
+export const performance =[
+  {name:"Nhyiraba Serwaa Dankwah",exercise:"45/50",assignment:"57/60",test:"75/100",practical:"40/45", exams:"870/1000",},
+  {name:"Xavier Sessi",exercise:"46/50",assignment:"54/60",test:"90/100",practical:"30/45", exams:"830/1000",},
+  {name:"Precious Gyamfi",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Priscilla Kwafo",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Blessing Obeng",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Claudia Duker",exercise:"45/50",assignment:"56/60",test:"92/100",practical:"40/45", exams:"860/1000",},
+  {name:"Priscilla Agyapong",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Stephen Oppong",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Micheal Otoo",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
+  {name:"Clarabell Antwi",exercise:"43/50",assignment:"47/60",test:"75/100",practical:"36/45", exams:"780/1000",}
+]

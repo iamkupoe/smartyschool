@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../../assets/images/school_logo.png';
+import { RegisterStudent } from '../../sample_db/students';
+import { Registrations } from '../../Constants';
 
 const RegistrationForm = () => {
   const [selectedImage, setSelectedImage] = useState('');
@@ -35,6 +37,34 @@ const RegistrationForm = () => {
       };
     }
   };
+
+  const handleRegisterStudent = () => {
+    const data = {
+      regDate,
+      studentId,
+      academicYr,
+      stage,
+      term,
+      surname,
+      otherNames,
+      nationality,
+      religion,
+      dob,
+      pob,
+      gender,
+      digiAddress,
+      dadName,
+      dadJob,
+      dadPhone,
+      dadDigiAddress,
+      mumName,
+      mumJob,
+      mumPhone,
+      mumMumDigiAddress,
+    }
+    Registrations.push(data);
+    console.log("Registered student")
+  }
 
   const titleText = 'font-bold w-full';
   const sectionContainer =
@@ -146,7 +176,7 @@ const RegistrationForm = () => {
                 <option value="Basic 6">Basic 6</option>
                 <option value="JHS1">J. H. S 1</option>
                 <option value="JHS2">J. H. S 2</option>
-                <option value="JHS3">J. H. S 2</option>
+                <option value="JHS3">J. H. S 3</option>
               </select>
             </div>
             <div className={`${titleInputContainer} md:w-[18%]`}>
@@ -409,7 +439,7 @@ const RegistrationForm = () => {
               className="bg-[#0073cf] text-[#fff] p-[0.25rem] w-full md:w-[20rem] rounded-md outline-none"
               id="registerButtonId"
               onClick={() => {
-                console.log('Date:', regDate);
+                handleRegisterStudent
               }}
             >
               register
