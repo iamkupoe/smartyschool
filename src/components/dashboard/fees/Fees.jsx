@@ -9,7 +9,7 @@ import {
 import { PiBooksThin } from 'react-icons/pi';
 import { Link, Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { getFeesCurrentScreen } from '../Utils';
+import { getFeesCurrentScreen } from '../../Utils';
 
 function Fees() {
   const menuButtonsStyle = 'border border-[#c8c8c8] px-[0.2rem] py-[0.2rem]';

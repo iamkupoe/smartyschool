@@ -12,6 +12,9 @@ export default {
         accent_dark: '#27634C',
       },
     },
+    boxShadow:{
+      paper: '5px 5px 18px 6px rgba(0, 0, 0, 0.15)',
+    }
   },
   variants: {
     extend: {},

@@ -15,15 +15,16 @@ const FeedingPayment = () => {
   console.log("select:", studentList)
 
   const handleSelectAll = () => {
-  
+
 
     checkBoxRef.current.checked ?
       [...studentList].map((student) => {
         student.children[1].checked = true
       }) : [...studentList].map((student) => {
         student.children[1].checked = false
+        
       });
-    console.log("child:", studentList)
+    
   }
 
   useEffect(() => {

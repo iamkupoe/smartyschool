@@ -354,3 +354,7 @@ export const performance =[
   {name:"Micheal Otoo",exercise:"37/50",assignment:"45/60",test:"80/100",practical:"30/45", exams:"730/1000",},
   {name:"Clarabell Antwi",exercise:"43/50",assignment:"47/60",test:"75/100",practical:"36/45", exams:"780/1000",}
 ]
+
+ export const inputStyle =
+    'border border-[#000000] lg:p-[0.25rem] px-[0.25rem] outline-none';
+  export const labelStyle = 'text-[1rem] lg:text-[1.5rem]';

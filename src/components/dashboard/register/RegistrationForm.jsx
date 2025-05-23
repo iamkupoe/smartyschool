@@ -79,7 +79,7 @@ const RegistrationForm = () => {
         className="h-[88vh] overflow-y-auto"
         style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}
       >
-        <div className="px-[3%] md:mx-[5%] lg:mx-[8%] md:px-[2%] lg:px-[10%] pt-[1.5rem] mt-[1rem] shadow-xl">
+        <div className="px-[3%] md:mx-[5%] lg:mx-[8%] md:px-[2%] lg:px-[10%] pt-[1.5rem] mt-[1rem] shadow-paper">
           <div className="flex flex-row justify-between items-start p-[0.2rem] border-b ">
             <div className="w-[4.5rem] h-[4.5rem] md:w-[7rem] md:h-[7rem] p-[0.5rem] border">
               <img src={logo} className="w-[100%]" alt="school crest" />

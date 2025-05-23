@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Summary.css';
 import { attendanceData, summaryData, enrollmentData } from '../Constants';
-import FeesComponent from './FeesComponent';
+import FeesComponent from './fees/FeesComponent';
 import {
   BarChart,
   Bar,

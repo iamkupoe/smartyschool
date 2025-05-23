@@ -3,7 +3,7 @@ import { AiOutlineUserAdd, AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { PiBooksThin } from 'react-icons/pi';
 import { Link, Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { getRegisterCurrentScreen } from '../Utils';
+import { getRegisterCurrentScreen } from '../../Utils';
 
 const Register = () => {
   const menuButtonsStyle = 'border border-[#c8c8c8] px-[0.2rem] py-[0.2rem]';
@@ -24,23 +24,21 @@ const Register = () => {
       <section className="border-b border-b-[#c8c8c8] h-[12vh] py-[0.5rem] px-[0.5rem] flex flex-row gap-[0.25rem] justify-start items-center">
         <Link
           to="/dashboard/register/registrations"
-          className={`${menuButtonsStyle} ${
-            currentUrl === 'registration' ? 'bg-[#000]' : ''
-          }`}
+          className={`${menuButtonsStyle} ${currentUrl === 'registration' ? 'bg-[#000]' : ''
+            }`}
         >
           <PiBooksThin className={`${menuBtnIconStyle}`} />
           <span className={`${menuBtnTextStyle}`}>register</span>
         </Link>
         <Link
-          className={`${menuButtonsStyle} ${
-            currentUrl === 'registration-form' ? 'bg-[#000]' : ''
-          }`}
+          className={`${menuButtonsStyle} ${currentUrl === 'registration-form' ? 'bg-[#000]' : ''
+            }`}
           to="/dashboard/register/registration-form"
         >
           <AiOutlineUsergroupAdd className={`${menuBtnIconStyle} `} />
           <span className={`${menuBtnTextStyle}`}>student</span>
         </Link>
-        <Link className={`${menuButtonsStyle}`}>
+        <Link className={`${menuButtonsStyle} ${currentUrl === 'staff-reg-form' ? `bg-[#000]` : ``}`} to="/dashboard/register/staff-reg-form" >
           <AiOutlineUserAdd className={`${menuBtnIconStyle}`} />
           <span className={`${menuBtnTextStyle}`}>tutor</span>
         </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/FeesComponent.css';
+import '../../../css/FeesComponent.css';
 
 const FeesComponent = ({ icon, type, expected, balance, paid }) => {
   return (
