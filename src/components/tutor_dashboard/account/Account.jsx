@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { LiaUserEditSolid } from 'react-icons/lia';
 import profilePic from '../../../assets/images/profile.jpg';
+import { inputStyle, labelStyle } from '../../Constants';
 
 const Account = () => {
   const labelInputBox = 'flex flex-col justify-start align-center mb-[0.5rem]';
-  const inputStyle =
-    'border border-[#000000] lg:p-[0.25rem] px-[0.25rem] outline-none';
-  const labelStyle = 'text-[1rem] lg:text-[1.5rem]';
+
 
   const [disability, setDisability] = useState(true);
   const [selectedImage, setSelectedImage] = useState('');
@@ -48,9 +47,8 @@ const Account = () => {
               onClick={handleEnableInput}
             >
               <LiaUserEditSolid
-                className={`text-[1.5rem]  ${
-                  !disability ? 'text-[#2D54C8]' : 'text-[#000000]'
-                } `}
+                className={`text-[1.5rem]  ${!disability ? 'text-[#2D54C8]' : 'text-[#000000]'
+                  } `}
               />
             </button>
           </div>
