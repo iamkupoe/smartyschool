@@ -20,7 +20,8 @@ export const getCurrentUrl = (url) => {
   } else if (
     current === 'register' ||
     current === 'register/registrations' ||
-    current === 'register/registration-form'
+    current === 'register/registration-form' ||
+    current === 'register/staff-reg-form'
   ) {
     displayUrl = 'register';
   }
@@ -36,6 +37,8 @@ export const getRegisterCurrentScreen = (url) => {
     displayUrl = 'registration-form';
   } else if (current === 'register-tutor') {
     displayUrl = 'register-tutor';
+  } else if (current === 'staff-reg-form') {
+    displayUrl = 'staff-reg-form';
   }
   return displayUrl;
 };
