@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Summary from './components/dashboard/Summary';
-import Register from './components/dashboard/Register';
-import Fees from './components/dashboard/Fees';
+import Register from './components/dashboard/register/Register';
+import Fees from './components/dashboard/fees/Fees';
 import Reports from './components/dashboard/Reports';
 import Settings from './components/dashboard/Settings';
 import Login from './pages/Login';
@@ -25,6 +25,7 @@ import PerformanceList from './components/tutor_dashboard/performance/performanc
 import RecordPerformance from './components/tutor_dashboard/performance/RecordPerformance';
 import TutorProfile from './components/tutor_dashboard/account/TutorProfile';
 import ResetPassword from './components/tutor_dashboard/account/ResetPassword';
+import StaffRegistrationForm from './components/dashboard/register/StaffRegistrationForm';
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
           {
             path: 'registration-form',
             element: <RegistrationForm />,
+          },
+          {
+            path: 'staff-reg-form',
+            element: <StaffRegistrationForm />,
           },
         ],
       },
