@@ -35,6 +35,7 @@ const Account = () => {
     if (file) {
       reader.readAsDataURL(file);
     }
+    
   };
 
   return (
