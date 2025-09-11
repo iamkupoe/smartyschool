@@ -2,6 +2,7 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
+  
   theme: {
     extend: {
       colors: {
@@ -14,7 +15,8 @@ export default {
     },
     boxShadow:{
       paper: '5px 5px 18px 6px rgba(0, 0, 0, 0.15)',
-    }
+    },
+  
   },
   variants: {
     extend: {},
